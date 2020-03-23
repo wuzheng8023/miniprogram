@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "选择学校",
+  "navigationBarTextStyle": "black",
+
+  "usingComponents": {
+    "van-area": "../../dist/area/index",
+    "van-popup": "../../dist/popup/index"
+  }
+
+}

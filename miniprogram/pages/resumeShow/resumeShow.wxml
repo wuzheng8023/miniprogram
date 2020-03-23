@@ -1,0 +1,131 @@
+<view class="container">
+
+  <view class="item" style="padding-bottom :30rpx;font-size:18px;font-weight:bold;">
+    <text>个人简历展示</text>
+  </view>
+
+  <view class="divLine"></view>
+
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <!-- 上半部分起始位置 -->
+    <view class="part1">
+
+
+      <view class="part1-2">
+
+        <!-- part1-2内容包含姓名、性别、出现年月； -->
+
+        <view class="item">
+          <view class="text">姓名：</view>
+          <view class="input-loction" style="">
+
+            <input class="input" bindinput="bindKeyInput" placeholder="姓名" />
+          </view>
+        </view>
+        <!-- part1-2从此部分开始 -->
+        <view class="part1-2-1">
+
+          <!-- part1-2-1内容包含性别，出生年月，目的是让二者并列显示； -->
+
+          <view class="item  sex">
+            <view class="text">性别：</view>
+            <view class="input-loction">
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker text">
+                </view>
+                <input class="input" bindinput="bindKeyInput" placeholder="性别" value="{{array[index]}}" />
+              </picker>
+
+            </view>
+          </view>
+
+          <view class="item  birth">
+            <view class="text">出生年月：</view>
+            <view class="input-loction">
+              <input class="input" bindinput="bindKeyInput" placeholder="出生年月" />
+            </view>
+          </view>
+        </view>
+
+      </view>
+      <!-- part1-2到此截至 -->
+
+
+      <view class="part1-1">
+        <!-- 证件照代码 -->
+        <van-image width="200rpx" height="260rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+      </view>
+
+    </view>
+    <!-- part1-1到此部分截至 -->
+
+    <view class="item">
+      <view class="text">学院全称：</view>
+      <view class="input-loction">
+        <input class="input" bindinput="bindKeyInput" placeholder="所在学院全称" />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">专业年级班级：</view>
+      <view class="input-loction">
+        <input class="input" bindinput="bindKeyInput" placeholder="例如：软件工程XX级XX班" />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">手机号：</view>
+      <view class="input-loction">
+        <input class="input" bindinput="bindKeyInput" placeholder="手机号" />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">QQ账号：</view>
+      <view class="input-loction">
+        <input class="input" bindinput="bindKeyInput" placeholder="QQ账号" />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">居住地址：</view>
+      <view class="input-loction">
+        <input class="input" bindinput="bindKeyInput" placeholder="在校住址；如，寝室号" />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">意向部门以及加入理由：</view>
+      <view class="input-loction">
+        <textarea class="textarea" bindinput="bindKeyInput" placeholder="例如：学习部；因为……;"></textarea>
+        <!-- <input class="input" bindinput="bindKeyInput" placeholder="例如：学习部；因为XXX;" /> -->
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">自我评价：</view>
+      <view class="input-loction">
+        <textarea class="textarea" bindinput="bindKeyInput" placeholder="可以写对自己性格的评价"></textarea>
+        <!-- <input class="input" bindinput="bindKeyInput" placeholder="可以写对自己性格的评价" /> -->
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">主要经历或曾获奖励：</view>
+      <view class="input-loction">
+        <textarea class="textarea" bindinput="bindKeyInput" placeholder="例如：20XX年高一，获得优秀班委称号；没有可写无；"></textarea>
+        <!-- <input class="input" bindinput="bindKeyInput" placeholder="例如：20XX年高一，获得优秀班委称号；没有可写无；" /> -->
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">备注：</view>
+      <view class="input-loction">
+        <textarea class="textarea" bindinput="bindKeyInput" placeholder="其它什么想说明的"></textarea>
+        <!-- <input class="input" bindinput="bindKeyInput" placeholder="其它什么想说明的" /> -->
+      </view>
+    </view>
+
+
+  </form>
+</view>

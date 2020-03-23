@@ -1,0 +1,122 @@
+<view class="container">
+
+  <view class="item" style="padding-bottom :30rpx;font-size:18px;font-weight:bold;">
+    <text>个人简历填写</text>
+  </view>
+
+  <view class="divLine"></view>
+
+  <form bindsubmit="formSubmit" bindreset="formReset">
+
+    <view class="item">
+      <view class="text">姓名：</view>
+      <view class="input-loction">
+
+        <input class="input" bindinput="bindKeyInput" placeholder="姓名" />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">性别：</view>
+      <view class="input-loction">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker text">
+          </view>
+          <input class="input" bindinput="bindKeyInput" placeholder="性别" value="{{array[index]}}" />
+        </picker>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">出生年月：</view>
+      <view class="input-loction">
+        <input class="input" bindinput="bindKeyInput" placeholder="出生年月" />
+      </view>
+    </view>
+    <view class="item">
+      <view class="text">学院全称：</view>
+      <view class="input-loction">
+        <input class="input" bindinput="bindKeyInput" placeholder="所在学院全称" />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">专业年级班级：</view>
+      <view class="input-loction">
+        <input class="input" bindinput="bindKeyInput" placeholder="例如：软件工程XX级XX班" />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">手机号：</view>
+      <view class="input-loction">
+        <input class="input" bindinput="bindKeyInput" placeholder="手机号" />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">QQ账号：</view>
+      <view class="input-loction">
+        <input class="input" bindinput="bindKeyInput" placeholder="QQ账号" />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">居住地址：</view>
+      <view class="input-loction">
+        <input class="input" bindinput="bindKeyInput" placeholder="在校住址；如，寝室号" />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">意向部门以及加入理由：</view>
+      <view class="input-loction">
+        <textarea class="textarea"  bindinput="bindKeyInput" placeholder="例如：学习部；因为……;"></textarea>
+        <!-- <input class="input" bindinput="bindKeyInput" placeholder="例如：学习部；因为XXX;" /> -->
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">自我评价：</view>
+      <view class="input-loction">
+       <textarea class="textarea"  bindinput="bindKeyInput" placeholder="可以写对自己性格的评价"></textarea>
+        <!-- <input class="input" bindinput="bindKeyInput" placeholder="可以写对自己性格的评价" /> -->
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">主要经历或曾获奖励：</view>
+      <view class="input-loction">
+      <textarea class="textarea"  bindinput="bindKeyInput" placeholder="例如：20XX年高一，获得优秀班委称号；没有可写无；"></textarea>
+        <!-- <input class="input" bindinput="bindKeyInput" placeholder="例如：20XX年高一，获得优秀班委称号；没有可写无；" /> -->
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">备注：</view>
+      <view class="input-loction">
+      <textarea class="textarea"  bindinput="bindKeyInput" placeholder="其它什么想说明的"></textarea>
+        <!-- <input class="input" bindinput="bindKeyInput" placeholder="其它什么想说明的" /> -->
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="text">上传证件照：</view>
+      <view class="input-loction">
+        <!-- 插入图片组件 -->
+        <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" max-count="1" />
+
+
+      </view>
+    </view>
+
+
+    <view class="btn-area">
+      <button form-type="reset" class="resetbutton">重置信息</button>
+      <navigator url="../resumeShow/resumeShow">
+        <button class="preview">效果预览</button>
+      </navigator>
+    </view>
+    <button form-type="submit" class="submitbutton">提交保存</button>
+  </form>
+</view>

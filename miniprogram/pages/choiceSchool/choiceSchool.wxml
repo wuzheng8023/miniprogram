@@ -1,0 +1,15 @@
+<input class="input" bindfocus="showPopup" placeholder="姓名" />
+
+<van-popup
+  show="{{ show }}"
+
+  position="bottom"
+  custom-style="height: 20%"
+  bind:close="onClose"
+  style="padding:500rpx 0 0 0;"
+> 
+
+
+<van-area area-list="{{ areaList }}" />
+
+</van-popup>

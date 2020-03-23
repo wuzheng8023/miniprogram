@@ -1,0 +1,12 @@
+{
+  "navigationBarBackgroundColor": "#00A383",
+  "navigationBarTitleText": "个人简历填写",
+  "navigationBarTextStyle": "black",
+  
+
+  
+  "usingComponents": {
+    "van-uploader": "../../dist/uploader/index"
+  }
+
+}
